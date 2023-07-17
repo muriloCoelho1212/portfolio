@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #eaeaea;
 } 
 
 :root {
@@ -39,58 +40,128 @@ body {
 
   display: grid;
   grid-template-areas: "profile timeline";
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 2fr; 
   grid-template-rows: 100vh;
 }
 
 nav {
-  padding: 64px;
+  padding: 48px;
   grid-area: timeline;
 
   overflow-y: scroll;
   animation: entering 0.7s ease-in-out;
 }
 
-.memory {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-
-  text-decoration: none;
-  margin-bottom: 64px;
+.techs h2{
+  font-size: 32px;
+  font-weight: 800;
 }
 
-.memory small {
+.cards{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border-bottom: 1px solid #9e9ea0;
+  margin: 20px 0px;
+}
+
+.cardTechs{
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-weight: 800;
+}
+
+.imgTechs{
+  width: 128px;
+}
+
+.projetos{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  text-decoration: none;
+
+  font-size: 1.2rem;
+  color: #bebebf;
+  line-height: 28px;
+}
+
+.projUVW{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-bottom: 1px solid #9e9ea0;
+}
+
+.projNLW{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-bottom: 1px solid #9e9ea0;
+}
+
+.projetos h2{
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.projetos small {
+  color: #bebebf;
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.projetos h3 {
+  font-size: 1.5rem;
+  color: #eaeaea;
+}
+
+.imgProj{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 16px;
+}
+
+#img1 {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  width: 280px;
+}
+
+#img2{
+  border-radius: 8px;
+  height: 360px;
+}
+
+#img3{
+  width: 360px;
+  border-radius: 8px;
+}
+
+#img4{
+  width: 360px;
+  border-radius: 8px;
+}
+
+.projNLW a{
   color: #bebebf;
   font-size: 0.75rem;
 }
 
-.memory h1 {
-  font-size: 2rem;
+.projNLW a:hover{
   color: #eaeaea;
+  transition: .5s;
 }
 
-.memory img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 8px;
-
-  transition: transform 0.3s ease-in-out;
-}
-
-.memory:hover img {
-  transform: scale(1.1);
-}
-
-.memory div {
-  width: 100%;
-  height: 280px;
-  overflow: hidden;
-  border-radius: 8px;
-}
-
-.memory p {
+.projetos p {
   font-size: 1.2rem;
   color: #bebebf;
   line-height: 28px;
@@ -147,11 +218,31 @@ aside {
   font-size: 2rem;
   text-align: center;
   padding: 10px;
+  font-weight: 800;
 }
 
 #descricao{
   line-height: 1.6;
   text-align: justify;
+  padding: 5px;
+}
+
+#contatos{
+  text-align: center;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.logostyle{
+  width: 32px;
+}
+
+.logostyle:hover{
+  opacity: .5;
+  transition: .5s;
+  cursor: pointer;
 }
 
 aside * {
